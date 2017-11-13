@@ -38,8 +38,9 @@ export class ProfileComponent implements OnInit {
 
   onSubmit() {
        console.log('calling service in add mode');
-       const profile = new Profile(this.profileForm.value['lastName'],
+       const profile = new Profile(
        this.profileForm.value['firstName'],
+       this.profileForm.value['lastName'],
        this.profileForm.value['email'],
        this.profileForm.value['phone'],
        this.profileForm.value['dob'],

@@ -1,6 +1,7 @@
 
 <div class="row">
   <div class="col-xs-12">
+    
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
@@ -13,6 +14,7 @@
             <label for="lastName">Last Name</label>
             <input
               type="text"
+              size="15"
               id="lastName"
               formControlName="lastName"
               class="form-control">
@@ -26,6 +28,7 @@
             <input
               type="text"
               id="phone"
+              size="10"
               formControlName="phone"
               class="form-control">
           </div>
@@ -38,6 +41,7 @@
             <input
               type="email"
               id="email"
+              size="20"
               formControlName="email"
               class="form-control">
           </div>
@@ -49,12 +53,15 @@
           <button
             type="submit"
             class="btn btn-success"
-            [disabled]="!profileForm.valid">Let Me In</button>
+            [disabled]="!loginForm.valid">Let Me In</button>
           <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
         </div>
       </div>
    
     
     </form>
+  
   </div>
 </div>
+ 
+

@@ -45,8 +45,10 @@ export class LoginComponent implements OnInit {
         data => {
           // refresh the list
           console.log(data);
-          this.router.navigateByUrl('profile');
-          return true;
+          if ( data['verified'] === 'true') {
+           this.router.navigateByUrl('profile');
+           return true;
+          }
         },
         error => {
           console.error('Error in verifying login!');
